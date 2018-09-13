@@ -6,7 +6,7 @@ const jimp = require('jimp');
 const Canvas = require('canvas');
  
 client.on('guildMemberAdd', member => {
-     const welcomer =  member.guild.channels.find('name', 'chat');
+     const welcomer =  member.guild.channels.find('name', 'اسم روم الترحيب');
 const w = ['./w1.png'];
  
          let Image = Canvas.Image,
@@ -31,7 +31,7 @@ const w = ['./w1.png'];
                         ctx.fontSize = '20px';
                         ctx.fillStyle = "#f1f1f1";
                         ctx.textAlign = "center";
-                        ctx.fillText(``, 300, 130);
+                        ctx.fillText(`Welcome To Server`, 300, 130);
                        
                         ctx.font = "bold 12px Arial";
                         ctx.fontSize = '20px';
@@ -62,7 +62,7 @@ welcomer.sendFile(canvas.toBuffer())
  
 })
       });                    
-});// 
+});
 var prefix = 'T-';
 
 client.on('ready', () => {
